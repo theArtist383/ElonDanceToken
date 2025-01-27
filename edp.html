@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ElonDanceToken (EDT) - Whitepaper</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #0d0d0d;
+            color: #fff;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        header {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: url('https://via.placeholder.com/1920x1080') center/cover no-repeat;
+            text-align: center;
+            color: #fff;
+            overflow: hidden;
+        }
+
+        header::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+        }
+
+        header h1 {
+            font-size: 4rem;
+            margin: 0;
+            z-index: 2;
+        }
+
+        header p {
+            font-size: 1.5rem;
+            margin-top: 10px;
+            z-index: 2;
+        }
+
+        header .buttons {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            z-index: 2;
+        }
+
+        header .buttons a {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 1rem;
+            font-weight: 600;
+            color: #fff;
+            text-decoration: none;
+            background: #e94560;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+
+        header .buttons a:hover {
+            background: #ff5f7e;
+        }
+
+        .navbar {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+            padding: 20px 50px;
+            z-index: 3;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+            margin-left: 20px;
+            font-size: 1rem;
+            transition: color 0.3s;
+        }
+
+        .navbar a:hover {
+            color: #e94560;
+        }
+
+        .section {
+            padding: 100px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section:nth-child(even) {
+            background: #1a1a1a;
+            border-radius: 10px;
+            padding: 100px 20px;
+        }
+
+        .tokenomics-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            align-items: stretch;
+        }
+
+        .tokenomics-item {
+            background: #1a1a1a;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            color: #fff;
+        }
+
+        .tokenomics-item h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: #e94560;
+        }
+
+        .tokenomics-item .percentage {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #fff;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #111;
+            color: #fff;
+        }
+
+        footer a {
+            color: #e94560;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        .roadmap-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        .roadmap-stage {
+            background: #1a1a1a;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .roadmap-stage:hover {
+            transform: translateY(-5px);
+        }
+
+        .roadmap-stage h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: #e94560;
+        }
+
+        .roadmap-stage ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            color: #ddd;
+        }
+
+        .roadmap-stage ul li {
+            font-size: 1rem;
+            margin: 10px 0;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fadeIn {
+            animation: fadeIn 1s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <a href="#about">About</a>
+            <a href="#tokenomics">Tokenomics</a>
+            <a href="#roadmap">Roadmap</a>
+            <a href="#community">Community</a>
+        </div>
+        <div class="content">
+            <h1>The Future of Crypto is <span style="color: #e94560;">EDT</span></h1>
+            <p>Empowering Fun and Rewards in the Decentralized World</p>
+        </div>
+    </header>
+
+    <section id="about" class="section fadeIn">
+        <h2>Executive Summary</h2>
+        <p>ElonDanceToken (EDT) is not just another cryptocurrency; it is a dynamic and innovative project designed to redefine decentralized engagement. At its core, EDT bridges the gap between blockchain technology and community-driven rewards, offering users an ecosystem that values participation, creativity, and collaboration.</p>
+        <p>With a strong focus on scalability and efficiency, EDT leverages the Binance Smart Chain to provide seamless and cost-effective transactions. This ensures that users from all over the globe can easily interact with the platform without barriers. The tokenomics of EDT are carefully crafted to foster sustainability, incentivize early adopters, and fund long-term development.</p>
+        <p>Whether you're a developer, an investor, or a community enthusiast, EDT provides unparalleled opportunities to engage in a token that is as fun as it is functional. Together, we aim to build a decentralized future where innovation meets inclusivity.</p>
+    </section>
+
+    <section id="tokenomics" class="section fadeIn">
+        <h2>Tokenomics</h2>
+        <div class="tokenomics-grid">
+            <div class="tokenomics-item">
+                <h3>Community Rewards</h3>
+                <span class="percentage">50%</span>
+                <p>Reserved for the community to incentivize participation and support during the early stages of EDT.</p>
+            </div>
+            <div class="tokenomics-item">
+                <h3>Development</h3>
+                <span class="percentage">20%</span>
+                <p>Allocated to fund the development of the ecosystem, including platform upgrades and new features.</p>
+            </div>
+            <div class="tokenomics-item">
+                <h3>Liquidity</h3>
+                <span class="percentage">20%</span>
+                <p>Ensures adequate liquidity on decentralized exchanges to support smooth trading operations.</p>
+            </div>
+            <div class="tokenomics-item">
+                <h3>Marketing</h3>
+                <span class="percentage">10%</span>
+                <p>Dedicated to promoting EDT through campaigns and partnerships to expand its reach globally.</p>
+            </div>
+        </div>
+    </section>
+    <section id="roadmap" class="section fadeIn">
+        <h2 style="text-align: center;">Roadmap</h2>
+        <div class="roadmap-container">
+            <div class="roadmap-stage">
+                <h3>Stage 1</h3>
+                <ul>
+                    <li>Token Launch</li>
+                    <li>Website Development</li>
+                    <li>Initial Community Building</li>
+                    <li>Smart Contract Deployment</li>
+                </ul>
+            </div>
+            <div class="roadmap-stage">
+                <h3>Stage 2</h3>
+                <ul>
+                    <li>PancakeSwap Listing</li>
+                    <li>Social Media Campaigns</li>
+                    <li>Airdrop Event</li>
+                    <li>Influencer Collaborations</li>
+                </ul>
+            </div>
+            <div class="roadmap-stage">
+                <h3>Stage 3</h3>
+                <ul>
+                    <li>Partnership Announcements</li>
+                    <li>Rewards Program Launch</li>
+                    <li>Community Governance</li>
+                    <li>Token Burn Mechanisms</li>
+                </ul>
+            </div>
+            <div class="roadmap-stage">
+                <h3>Stage 4</h3>
+                <ul>
+                    <li>Ecosystem Expansion</li>
+                    <li>DeFi Integration</li>
+                    <li>Advanced Marketing Campaigns</li>
+                    <li>Charity Initiatives</li>
+                </ul>
+            </div>
+            <div class="roadmap-stage">
+                <h3>Stage 5</h3>
+                <ul>
+                    <li>Global Partnerships</li>
+                    <li>Long-term Sustainability Plans</li>
+                    <li>Continuous Development</li>
+                    <li>Community-driven Innovations</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="community" class="section fadeIn">
+        <h2>Community</h2>
+        <p>Join us on our journey! Follow us on Twitter and stay updated with our whitepaper for more information.</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 ElonDanceToken. All rights reserved. | <a href="https://twitter.com/ElonDanceToken" target="_blank">Twitter</a> | <a href="https://www.elondancetoken.com/whitepaper.pdf" target="_blank">Whitepaper</a></p>
+    </footer>
+</body>
+</html>
